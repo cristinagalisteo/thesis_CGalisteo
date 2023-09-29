@@ -8,6 +8,8 @@
 
 **KO_database.R:** Download KEGG database and link them (it might take a while)
 
+**KO_merge.R:** Merge all the file from BlastKOALA into one.
+
 **rpkg_linecounter.R:** Filter all blast files in the folder to calculate RPKG
 
-**rpkg_linecounter_oneFile:** Filter blast file to calculate RPKG and generate one result for each file (Use when the blast files are too big for your RAM)
+**rpkg_linecounter_oneFile.R:** Filter blast file to calculate RPKG and generate one result for each file (Use when the blast files are too big for your RAM)
