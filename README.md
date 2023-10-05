@@ -6,6 +6,8 @@
 
 **fromHeroToZero.R:** Transform "OGs_matrix" (from Enveomics' Blast all vs all file) to "0/1 matrix"
 
+**getMyACC.R:** Add Accession Number to an info file for gitana.R.
+
 **KO_database.R:** Download KEGG database and link them (it might take a while)
 
 **KO_merge.R:** Merge all the file from BlastKOALA into one.
