@@ -33,4 +33,4 @@
 
 **rpkg_linecounter_oneFile.R:** Filter blast file to calculate RPKG and generate one result for each file (Use when the blast files are too big for your RAM).
 
-**shannon_doversity.R:** Calculate alfa diversity from "19.Project.contigtable" table (SQM), and plot it too.
+**shannon_diversity.R:** Calculate alfa diversity from "19.Project.contigtable" table (SQM), and plot it too.
