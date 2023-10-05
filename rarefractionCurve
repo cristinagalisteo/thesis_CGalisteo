@@ -1,0 +1,95 @@
+# Calculate RarefractionCurve from "19.Project.contigtable" table (SQM)
+#
+# @Date: 30/03/2023
+# @Author: Cristina Galisteo
+
+# R version 3.6.2
+# library(vegan) # v.
+# library(paletteer) # v.1.4.0
+
+files <- unlist(list.files(pattern = "forR"))
+
+# Get info into a list: 
+mylist <- list()
+for (newfile in files) {
+  # Read table: 
+  f <- read.table(newfile, header = T, sep = "\t")
+  
+  # Extract taxonomic rank: 
+  genus_v <- rep(NA, nrow(f)) # Vector where the selected rank will be save. 
+  l <- (strsplit(as.character(f$Tax), ";")) 
+  lp <- grep ("g_", l)  # Posiciones que tienen anotado para phylum
+  t <- unlist(strsplit(as.character(f$Tax), ";"))  # Todo
+  tp <- grep ("g_", t) # Posiciones de "todo" que continen "phylo". Corresponderan con los rows de posiciones de "p". 
+  genus_v[lp] <- t[tp] # Sustituye NA por la taxo
+  f <- cbind(f, genus_v) # Add as a new column
+  
+  # Get the diversity: 
+  mym <- t(table(f$genus_v))  #  Columns are the taxo names ...
+  rownames(mym) <- newfile     # ... and row is the sample. 
+  mylist[[newfile]] <- mym # Save the matrix.
+  
+}
+
+for (i in 1:length(mylist)){
+  mylist[[i]] <- as.data.frame(t(mylist[[i]]))
+  rownames(mylist[[i]]) <- mylist[[i]][,1]
+  colnames(mylist[[i]]) <- c("tax", "del", names(mylist)[i])
+}
+  
+mymerged <- merge(mylist[[1]], mylist[[2]], by=0, all=T)
+rownames(mymerged) <- mymerged$Row.names
+head(mymerged)
+mymerged <- mymerged[, -c(1,2,3,5,6)]
+
+for (i in 3:length(mylist)){
+  mymerged <- merge(mymerged, mylist[[i]], by=0, all=T)
+  rownames(mymerged) <- mymerged$Row.names
+  mymerged <- mymerged[, -c(1, (i+1), (i+2))]
+}
+
+mymerged[is.na(mymerged)] <- 0
+head(mymerged)
+
+# Finally we have matrix with the diversity of each sample. 
+# Samples should be in the rows. 
+mymergedt <- as.data.frame(t(mymerged))
+head(mymergedt)
+dim(mymergedt)
+rownames(mymergedt) <- c("M3_1A", "M2_1A", "M3_1B", "M2_1B", "M3_1C", "M2_1C", 
+                         "M3_2A", "M2_2A", "M3_2B", "M2_2B", "M3_2C", "M2_2C",
+                         "M3_3A", "M2_3A", "M3_3B", "M2_3B", "M3_3C", "M2_3C")
+
+# Let's do the work: 
+library(vegan)
+library(paletteer)
+
+S <- specnumber(mymergedt)
+raremax <- min(rowSums(mymergedt))
+Srare <- rarefy(mymergedt, raremax)
+
+plot(S, Srare)
+abline(0, 1)
+# rarecurve(mymergedt, step = 20, sample = nrow(f), col = "blue", cex = 0.6)
+rarecurve(mymergedt, step = 20, sample = raremax, col = paletteer_d("ggthemes::Tableau_20"), cex = 0.6)
+
+# paletteer_d("RColorBrewer::Set1")
+
+colores <- c("#E41A1CFF", "#E41A1CFF", "#377EB8FF", "#377EB8FF", "#4DAF4AFF", "#4DAF4AFF", 
+             rep("#984EA3FF", 2), rep("#FF7F00FF", 2), rep("#FFFF33FF", 2),
+             rep("#A65628FF", 2), rep("#F781BFFF", 2), rep("#999999FF", 2))
+line <- c(rep (c("solid", "dashed"),9) ) 
+
+jpeg("rafractionFamily.jpg", width = 22, height = 20, units = "cm", res = 300)
+rarecurve(mymergedt, step = 20, sample = raremax, col = colores, lty = line , cex = 1, 
+          ylab = substitute(paste(bold("Number of families"))), 
+          xlab = substitute(paste(bold("Sample Size"))), 
+          label = F
+            )
+legend("bottomright", 
+       legend=rownames(mymergedt), 
+       col = colores, 
+       lty = line, 
+       ncol = 3
+)
+dev.off()
