@@ -15,6 +15,10 @@
 
 **fromHeroToZero.R:** Transform "OGs_matrix" (from Enveomics' Blast all vs all file) to "0/1 matrix".
 
+**gb_extract_v3.py:** **INTERACTIVE** Extract gene from genbank (gb|gbf|gbff) format to gb|fasta format.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Information about the length or number of N is saved in a .tsv file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Compatible with genbank file from Prokka.
+
 **genome2remove.R:** Create a list of genomes with undesired parameters from a checkm file. From that list, genomes could be easily removed from a folder by Linux commands.
 
 **getMyACC.R:** Add Accession Number to an info file for gitana.R.
