@@ -23,8 +23,10 @@
 
 **KO_merge.R:** Merge all the file from BlastKOALA into one.
 
-**rarefactionCurve.R:** Calculate rarefraction curve from "19.Project.contigtable" table (SqM) and plot it afterwards.
+**rarefactionCurve.R:** Calculate rarefraction curve from "19.Project.contigtable" table (SQM) and plot it afterwards.
 
 **rpkg_linecounter.R:** Filter all blast files in the folder to calculate RPKG.
 
 **rpkg_linecounter_oneFile.R:** Filter blast file to calculate RPKG and generate one result for each file (Use when the blast files are too big for your RAM).
+
+**shannon_doversity.R:** Calculate alfa diversity from "19.Project.contigtable" table (SQM), and plot it too.
