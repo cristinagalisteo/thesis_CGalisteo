@@ -1,14 +1,14 @@
 # thesis_CGalisteo
 
-**analysisPhyChem.R:** Analysis of the physico physicochemical parameters of the sample.
+**analysisPhyChem.R:** Analysis of the physico physicochemical parameters of the samples.
 
-**cleaning_seqs.py:** **INTERACTIVE** Filter contigs from fasta file by length or SPAdes kmer.<br> 
+**cleaning_seqs.py:** **INTERACTIVE** Filter *contigs* from fasta file by length or SPAdes kmer.<br> 
 &nbsp;&nbsp;&nbsp;&nbsp;By default, filter out sequences shorter than 500 bp. <br>
 &nbsp;&nbsp;&nbsp;&nbsp;It's available in the servidor. <br>
 &nbsp;&nbsp;&nbsp;&nbsp; Usually executed as follow: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;<code>cleaning_seqs.py -in <fasta> -cov 20 -l 500</code>
 
-**countingAAS.py:** **INTERACTIVE** Count number of each amino acids in a fasta file and calculate the percentage. 
+**countingAAS.py:** **INTERACTIVE** Count number of each amino acids in a fasta file and calculate the percentage. <br>
 &nbsp;&nbsp;&nbsp;&nbsp;You might want to use <code>cleaning_seqs.py -l 100</code> first. 
 
 **exclusiveCounting.R:** Count exclusive genes for a genome from a pangenome matrix.
