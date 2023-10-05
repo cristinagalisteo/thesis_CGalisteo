@@ -4,6 +4,8 @@
 
 **countingAAS.py:** Count the number of each amino acids in a FASTA file and calculate the percentage. You might want to use 'cleaning_seqs.py -l 100' first. Interactive
 
+**exclusiveCounting:** Count exclusive genes for a genome from a pangenome matrix
+
 **fromHeroToZero.R:** Transform "OGs_matrix" (from Enveomics' Blast all vs all file) to "0/1 matrix"
 
 **getMyACC.R:** Add Accession Number to an info file for gitana.R.
