@@ -13,6 +13,8 @@
 
 **exclusiveCounting.R:** Count exclusive genes in a genome from a pangenome matrix.
 
+**fakeARBinfofile.R:** Create a file with info of the strains to use with **gitana.R**.
+
 **fromHeroToZero.R:** Transform "OGs_matrix" (from Enveomics' Blast all vs all file) to "0/1 matrix".
 
 **gb_extract_v3.py:** **INTERACTIVE** Extract gene from genbank (gb|gbf|gbff) format to gb|fasta format.<br>
@@ -21,7 +23,7 @@
 
 **genome2remove.R:** Create a list of genomes with undesired parameters from a checkm file. From that list, genomes could be easily removed from a folder by Linux commands.
 
-**getMyACC.R:** Add Accession Number to an info file for gitana.R.
+**getMyACC.R:** Add Accession Number to an info file in **gitana.R**.
 
 **ko_database.R:** Download KEGG database and link them (it might take a while).
 
