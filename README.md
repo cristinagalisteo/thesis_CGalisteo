@@ -23,9 +23,9 @@
 
 **getMyACC.R:** Add Accession Number to an info file for gitana.R.
 
-**KO_database.R:** Download KEGG database and link them (it might take a while).
+**ko_database.R:** Download KEGG database and link them (it might take a while).
 
-**KO_merge.R:** Merge all the file from BlastKOALA into one.
+**ko_merge.R:** Merge all the file from BlastKOALA into one.
 
 **rarefactionCurve.R:** Calculate rarefraction curve from "19.Project.contigtable" table (SQM) and plot it afterwards.
 
