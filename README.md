@@ -51,7 +51,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<code>reroot.R -t <tree.file> -n <node_or_otu.number> -p <position> -o <name_rerooted.tree> -W <output.width> -H <output.height> -s <tree.size> </code>
 
 **rpkg_linecounter.R:** Filter all blast files in the folder to calculate RPKG.<br>
-<code>rpkg_linecounter_oneFile.R</code>
+&nbsp;&nbsp;&nbsp;&nbsp;<code>rpkg_linecounter_oneFile.R</code>
 
 **rpkg_linecounter_oneFile.R:** Filter blast file to calculate RPKG and generate one result for each file <br>
 &nbsp;&nbsp;&nbsp;&nbsp;**INTERACTIVE** <br>
