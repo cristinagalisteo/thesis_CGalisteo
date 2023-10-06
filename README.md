@@ -27,7 +27,7 @@
 **gb_extract_v3.py:** **INTERACTIVE** Extract gene from genbank (gb|gbf|gbff) format to gb|fasta format.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Information about the length or number of N is saved in a .tsv file.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Compatible with genbank file from Prokka.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<code>gb_extract_v3.py -f <file.fasta> -s</code>
+&nbsp;&nbsp;&nbsp;&nbsp;<code>gb_extract_v3.py -in <file.gb> -prod 16SrRNA -o fasta -prokka - tsv</code>
 
 **genome2remove.R:** Create a list of genomes with undesired parameters from a checkm file. From that list, genomes could be easily removed from a folder by Linux commands.
 
