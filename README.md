@@ -11,6 +11,11 @@
 **countingAAS.py:** **INTERACTIVE** Count number of each amino acids in a fasta file and calculate the percentage. <br>
 &nbsp;&nbsp;&nbsp;&nbsp;You might want to use <code>cleaning_seqs.py -l 100</code> first. 
 
+**countseq.py:** **INTERACTIVE** Size of each of the sequences in a fasta file.  <br>
+&nbsp;&nbsp;&nbsp;&nbsp; Results will be printed on screen.  <br>
+&nbsp;&nbsp;&nbsp;&nbsp; <code>-s</code> would save the results in "countingSEQs.tsv" file. <br>
+&nbsp;&nbsp;&nbsp;&nbsp; <code>countseq.py -f <file.fasta> -s</code>
+
 **exclusiveCounting.R:** Count exclusive genes in a genome from a pangenome matrix.
 
 **fakeARBinfofile.R:** Create a file with info of the strains to use with **gitana.R**.
