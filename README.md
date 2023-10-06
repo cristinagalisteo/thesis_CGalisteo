@@ -45,7 +45,7 @@
 **reroot.R:** Reroot tree files.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;**INTERACTIVE** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;First, print original tree with <code>-c</code> to know node numeration. <br>
-You might have to ajust tree size or output size (by default, A4) to fit it in the image.  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;You might have to ajust tree size or output size (by default, A4) to fit it in the image.  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;<code>reroot.R -t <tree.file> -c -W <output.width> -H <output.height> -s <tree.size> </code>  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Check which node/OTU should be the new outgrout and reroot. It will print the next tree as image too:  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;<code>reroot.R -t <tree.file> -n <node_or_otu.number> -p <position> -o <name_rerooted.tree> -W <output.width> -H <output.height> -s <tree.size> </code>
@@ -55,7 +55,7 @@ You might have to ajust tree size or output size (by default, A4) to fit it in t
 
 **rpkg_linecounter_oneFile.R:** Filter blast file to calculate RPKG and generate one result for each file <br>
 &nbsp;&nbsp;&nbsp;&nbsp;**INTERACTIVE** <br>
-Use when the blast files are too big for your RAM. <br>
-<code>rpkg_linecounter_oneFile.R -f <blast.result></code>
+&nbsp;&nbsp;&nbsp;&nbsp;Use when the blast files are too big for your RAM. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<code>rpkg_linecounter_oneFile.R -f <blast.result></code>
 
 **shannon_diversity.R:** Calculate alfa diversity from "19.Project.contigtable" table (SQM), and plot it too.
