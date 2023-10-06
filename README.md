@@ -59,3 +59,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<code>rpkg_linecounter_oneFile.R -f <blast.result></code>
 
 **shannon_diversity.R:** Calculate alfa diversity from "19.Project.contigtable" table (SQM), and plot it too.
+
+**symetric2asymetric.R:**  Transform the symetric result into a asymetric result. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;**INTERACTIVE** <br>
+&nbsp;&nbsp;&nbsp;&nbsp;It is possible that some programs need ANI results input. If running orthoANI with 'list' option, the result is symetric.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This script transforms the symetric result into a asymetric result (that can be used with mOTUlize, for example).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<code>symetric2asymetric.R -i <symetric.file> -o <asymetric.file></code>
