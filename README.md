@@ -2,7 +2,8 @@
 
 **analysisPhyChem.R:** Analysis of the physico physicochemical parameters of the samples.
 
-**cleaning_seqs.py:** **INTERACTIVE** Filter *contigs* from fasta file by length or SPAdes kmer.<br> 
+<b>cleaning_seqs.py:</b> [INTERACTIVE]() Filter *contigs* from fasta file by length or SPAdes kmer.<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;INTERACTIVE <br>
 &nbsp;&nbsp;&nbsp;&nbsp;By default, filter out sequences shorter than 500 bp. <br>
 &nbsp;&nbsp;&nbsp;&nbsp;It's available in the servidor. <br>
 &nbsp;&nbsp;&nbsp;&nbsp; Usually executed as follow: <br>
