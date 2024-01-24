@@ -1,6 +1,6 @@
 # thesis_CGalisteo
 
-**analysisPhyChem.R:** Analysis of the physico physicochemical parameters of the samples.
+**analysisPhyChem.R:** Analysis of the physicochemical parameters of the samples.
 
 **cleaning_seqs.py:** Filter *contigs* from fasta file by length or SPAdes kmer.<br> 
 &nbsp;&nbsp;&nbsp;&nbsp;**INTERACTIVE** <br>
